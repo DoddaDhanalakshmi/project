@@ -1,0 +1,1539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        .firstblock{
+            height:730px;
+            width:100%;
+            background-color:grey;
+        }
+
+        .parent{
+            display: grid;
+            grid-template-columns: repeat(7,1fr) ;
+            height:100px;
+            width:100%;
+
+
+        }
+        .child1{
+            grid-row: 1/3;
+            grid-column: 1/2;
+            background-color:orangered;
+            color:white;
+            height:120px;
+            width:250px;
+            padding-left: 20px;
+            padding-top: 30px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        
+        .child2>img{
+            height:15px;
+            width:15px;
+            grid-column:3/4;
+            grid-row:1/2;
+            margin-left:160px;
+
+        }
+        .child3>p{
+            grid-row:1/2;
+            grid-column:4/7;
+            color:whitesmoke;
+            font-size: 10px;
+            margin-left:5px;
+            margin-top: 3px;
+        }
+        .child4>img{
+            height:15px;
+            width:15px;
+            grid-row: 1/2;
+            grid-column: 6/7;
+            margin-left: 200px;
+            
+        }
+        .child5>p{
+            font-size: 8px;
+            color:whitesmoke;
+            margin-top:4px;
+            margin-left:9px;
+
+        }
+        .nav{
+            grid-row:2/3;
+            grid-column: 2/8;
+            background-color: black;
+            height:88px;
+            margin-top:10px;
+            
+        }
+        .nav-items{
+            display: flex;
+            color:white;
+            list-style-type: none;
+            justify-content: space-around;
+            margin-top: 35px;
+            font-size: 10px;;
+        }
+        .child6{
+            color:red;
+        }
+        
+        .child6:hover{
+            color:red
+            
+        }
+        .child7:hover{
+            color:red;
+        }
+        .child8:hover{
+            color:red;
+        }
+        .child9:hover{
+            color:red;
+        }
+        .child10:hover{
+            color:red;
+            list-style-type: none;
+           
+        }
+        .sub_child{
+            display: none;
+            
+        }
+        .sub_child ul{
+            list-style-type: none;
+        }
+        .nav-items .child10:hover .sub_child{
+            display: block;
+            position: absolute;
+            color:black;
+            background-color: white;
+            margin-top: 50px;
+            height:60px;
+            width:80px;
+            padding-left: 14px;
+        }
+        .child11:hover{
+            color:red;
+        }
+
+        .parent1>img{
+            height:20px;
+            width:20px;
+            border-radius: 50%;
+            border:0.7px solid black;
+            margin-top:-7px;
+            
+        }
+        
+        .parent1{
+            display: inline-block;
+            position: relative;
+        }
+        .parent1>img:hover{
+            background-color: red;
+        }
+        .parent2{
+            margin-top:70px;
+            margin-left:220px;
+            font-size: 40px;
+            color:white;
+
+
+        }
+        .parent3{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap:5px;
+
+        }
+        .parent3 .first, .third{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .parent3 img{
+            border-radius: 8px;
+            object-fit: cover;
+            margin-top:30px;
+            
+        }
+        .first img{
+            margin-bottom: 10px;
+            width:250px;
+        }
+        .parent3 p{
+            text-align: justify;
+            margin-top: 60px;
+            margin-left: 20px;
+            height:300px;
+        }
+        .second{
+            height: 380px;
+            margin-left: 15px;
+            margin-top: 30px;
+            width:250px;
+        }
+        .third{
+            height:380px;
+        }
+        .third p{
+            margin-top: 30px;
+            margin-right: 40px;;
+            width:230px;
+        }
+        .third img{
+            margin-top:70px;
+            width:250px
+            
+        }
+        .secondblock{
+                height:400px;
+                width:100%;
+                display: flex;
+                justify-content: start;
+                gap:20px;
+                flex-wrap: wrap;
+                margin-top: 40px;
+        }
+        .chef img{
+            height:100px;
+            width:100px;
+            margin-left: 30px;
+            position:absolute;
+            z-index: 5;
+            animation:rotate 5s linear infinite;  
+            
+        }
+        @keyframes rotate {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+            
+        }
+        .chef2 img{
+            position:absolute;
+            top:30;
+            z-index: 10;
+            border-top-left-radius: 50%;
+            margin-left: 30px;
+            margin-top: 10px;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius:5px;
+            border-top-right-radius: 5px;
+            height:350px;
+            
+           
+            
+        }
+        .about{
+           margin-left:330px;
+           margin-top:10px;
+           height:100px;
+           width:400px;
+           display: flex;
+           flex-wrap:wrap;
+           gap:10px;
+           
+        }
+        .block>h3{
+            color:red;
+        }
+        .block>h1{
+            padding-left:5px;
+            padding-top:9px;
+        }
+        .block>p{
+            font-size: 10px;
+            padding-top:15px;
+        }
+        .sub_about{
+            display: flex;
+            flex-direction: row;
+            gap:10px;
+        }
+        .features{
+            height:189px;
+            width:230px;
+            background-color:whitesmoke;
+            border-radius: 5px;
+            
+        }
+        .features>img{
+            margin-left:10px;
+            border-radius: 50%;
+            background-color:orangered;
+            margin-top: 10px;    
+        }
+        .features>h3{
+            margin-left: 12px;
+        }
+        .features>p{
+            margin-left: 12px;
+            font-size: 12px;
+            padding-top:16px;
+        }
+        .features1{
+            height:185px;
+            width:230px;
+            
+            background-color: whitesmoke;
+            border-radius: 5px;;
+        }
+        .features1>img{
+            background-color: orangered;
+            border-radius: 50%;
+            margin-left:12px;
+            margin-top:10px;
+        }
+        .features1>h3{
+            margin-left:12px;
+        }
+        .features1>p{
+            font-size:12px;
+            margin-left: 12px;
+            padding-top:16px;
+        }
+        .thirdblock{
+            height:180px;
+            width:99%;
+            background-color: black;
+           
+        }
+        .static{
+            display: flex;
+            flex-direction:row;
+            flex-wrap: wrap;
+        }
+        .static>img{
+            border-radius: 50%;
+            background-color: white;
+            margin-left:50px;
+            margin-top: 50px;
+            width:60px;
+            height:80px;
+        }
+        .sub_static{
+            display: flex;
+            flex-direction: column;
+        }
+        .sub_static>h3{
+            color:white;
+            margin-top:60px;
+            margin-left: 30px;;
+        }
+        .sub_static>h1{
+            color:white;
+            margin-left:28px;
+            padding-top:10px
+        }
+        .people>img{
+            border-radius: 50%;
+            background-color: white;
+            margin-left:50px;
+            margin-top:50px;
+            height:80px;
+            width:60px;
+            
+        }
+        .sub_people{
+            display: flex;
+            flex-direction: column;
+        }
+        .sub_people>h3{
+            color:white;
+            margin-left:30px;
+            margin-top:60px;
+        }
+        .sub_people>h1{
+            color:white;
+            padding-top:10px;
+            margin-left:28px;
+        }
+        .tick>img{
+            border-radius: 50%;
+            background-color: white;
+            margin-left:50px;
+            margin-top:50px;
+            height:80px;
+            width:60px;
+
+        }
+        .sub_tick{
+            display:flex;
+            flex-direction: column;
+        }
+        .sub_tick>h3{
+            color:white;
+            margin-left:30px;
+            margin-top:60px;
+        }
+        .sub_tick>h1{
+            color:white;
+            padding-top:10px;
+            margin-left:28px;
+        }
+        .events>img{
+               border-radius: 50%;
+            background-color: white;
+            margin-left:50px;
+            margin-top:50px;
+            height:80px;
+            width:60px;
+        }
+        .sub_events{
+            display: flex;
+            flex-direction: column;
+        }
+        .sub_events>h3{
+            color:white;
+            margin-left:30px;
+            margin-top:60px;
+        }
+        .sub_events>h1{
+            color:white;
+            padding-top:10px;
+            margin-left:28px;
+        }
+        .fourthblock{
+            height:450px;
+            width:100%;
+            margin-top:100px;
+            background-color:black;
+            display: flex;
+            flex-direction: row;
+        }
+        .testimonial{
+            height:250px;
+            width:260px;
+            background-color: aqua;
+            position: absolute;
+            top:1400px;
+            margin-left:20px;
+            border-radius: 8px;
+           
+        }
+        .testimonial>img{
+            background-color: white;
+            border-radius: 50%;
+            margin-left:82px;
+            margin-top:20px;
+
+        }
+        .chefexperience{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .chefexperience>h3{
+            color:black;
+            padding-left:80px;
+            padding-top:20px;
+        }
+        .chefexperience>p{
+            padding-left:20px;
+            font-size: 12px;
+            padding-top: 10px;
+        }
+        .chefexperience>h6{
+            padding-left:90px;
+            color:orange;
+        }
+        .chefexperience>h6:hover{
+            color:red;
+        }
+        .menuvariations{
+            background-color: aqua;
+            height:250px;
+            width:260px;
+            margin-left:300px;
+            position:absolute;
+            top:1400px;
+            border-radius: 8px;
+
+
+        }
+        .menuvariations>img{
+             background-color: white;
+            border-radius: 50%;
+            margin-left:82px;
+            margin-top:20px;
+        }
+        .sub_menuvariations>h3{
+            color:black;
+            padding-left:80px;
+            padding-top:20px;
+
+        }
+        .sub_menuvariations>p{
+            padding-left:20px;
+            font-size: 12px;
+            padding-top: 10px;
+        }
+        .sub_menuvariations>h6{
+            padding-left:90px;
+            color:orange;
+
+        }
+        .sub_menuvariations>h6:hover{
+            color:red;
+        }
+        .healthyfood{
+            background-color: aqua;
+            height:250px;
+            width:250px;
+            margin-left:580px;
+            position:absolute;
+            top:1400px;
+            border-radius: 8px;;
+        }
+        .healthyfood>img{
+             background-color: white;
+            border-radius: 50%;
+            margin-left:82px;
+            margin-top:20px;
+        }
+        .sub_healthyfood>h3{
+            color:black;
+            padding-left:80px;
+            padding-top:20px;
+
+        }
+        .sub_healthyfood>p{
+            padding-left:20px;
+            font-size: 12px;
+            padding-top: 10px;
+        }
+        .sub_healthyfood>h6{
+            padding-left:90px;
+            color:orange;
+
+        }
+        .sub_healthyfood>h6:hover{
+            color:red;
+        }
+        .order{
+            display:flex;
+            flex-direction: wrap;
+           
+        }
+        .heading>h2{
+            color:white;
+            padding-left:365px;
+            padding-top: 250px;;
+        }
+        .heading>h1{
+             color:white;
+             padding-left:320px;
+             padding-top:10px;
+        }
+        .heading>h5{
+            color:white;
+            margin-left:390px;
+            margin-right:250px;
+            padding-left:10px;
+            border-radius:8px;
+            height:50px;
+            width:80px;
+
+            padding-top:20px;
+            margin-top: 20px;;
+            background-color: orangered;
+        }
+        .heading>h5:hover{
+            background-color: orange;
+            color:black;
+        }
+        .fifthblock{
+                height:200px;
+                width:100%;
+        }
+        .sub_fifthblock>h4{
+            color:red;
+            margin-left:370px;
+            margin-top:50px;
+
+        }
+        .sub_fifthblock>h1{
+            margin-left:300px;
+            width:400px;
+            margin-top:10px;
+            font-size: 40px;
+        }
+        .menu{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            margin-left:320px;
+            margin-right:300px;
+            height:30px;
+            margin-top:20px;
+            background-color: black;
+            width:30%;
+            padding-right:200px;
+            border-radius: 10px;;
+            
+        }
+        .breakfast>h5{
+            color:white;
+            padding-left:13px;
+            padding-top: 7px;
+            width:100px;
+            height:30px;
+            background-color: orange;
+            border-radius:8px;
+          
+        }
+        .lunch>h5{
+            color:white;
+            padding-left:20px;
+            padding-top:7px;
+            width:90px;
+            height:30px;
+            border-radius:8px;
+        }
+        .dinner>h5{
+            color:white;
+            padding-left:10px;
+            padding-top:7px;
+            width:70px;
+            height:30px;
+            border-radius: 8px;
+        }
+        .lunch>h5:active{
+            background-color: orange;
+        }
+        .dinner>h5:active{
+            background-color: orange;
+        }
+        .sixblock{
+            height:400px;
+            width:100%;
+            display: flex;
+            flex-direction: column; 
+        }
+        .fooditems{
+            width:100%;
+        }
+           
+        .fooditems>img{
+            height:200px;
+            width:210px;
+            position:relative;
+            transition:all 0.5s ease;
+            background-color: grey;
+           
+
+            
+        } 
+          .fooditems:hover{
+          transform:scale(1.1)
+            
+        }
+   
+        .menu1heading>h4{
+            position:absolute;
+            top:2310px;
+            left:120px;
+            background-color: black;
+            color:orangered;
+            border-radius: 8px;
+            font-size: 10px;
+            width:80px;
+            height:20px;
+            padding-left:8px;
+            padding-top:5px;
+            
+        }
+         .menu2heading>h4{
+            position:absolute;
+            top:2310px;
+            left:320px;
+            background-color: black;
+            color:orangered;
+            border-radius: 8px;
+            font-size: 10px;
+            width:80px;
+            height:20px;
+            padding-left:8px;
+            padding-top:5px;
+            
+        }
+         .menu3heading>h4{
+            position:absolute;
+            top:2310px;
+            left:540px;
+            background-color: black;
+            color:orangered;
+            border-radius: 8px;
+            font-size: 10px;
+            width:80px;
+            height:20px;
+            padding-left:8px;
+            padding-top:5px;
+            
+        }
+         .menu4heading>h4{
+            position:absolute;
+            top:2310px;
+            left:760px;
+            background-color: black;
+            color:orangered;
+            border-radius: 8px;
+            font-size: 10px;
+            width:80px;
+            height:20px;
+            padding-left:8px;
+            padding-top:5px;
+            
+        }
+         .menu5heading>h4{
+            position:absolute;
+            top:2510px;
+            left:120px;
+            background-color: black;
+            color:orangered;
+            border-radius: 8px;
+            font-size: 10px;
+            width:80px;
+            height:20px;
+            padding-left:8px;
+            padding-top:5px;
+            
+        }
+         .menu6heading>h4{
+            position:absolute;
+            top:2510px;
+            left:330px;
+            background-color: black;
+            color:orangered;
+            border-radius: 8px;
+            font-size: 10px;
+            width:80px;
+            height:20px;
+            padding-left:8px;
+            padding-top:5px;
+            
+        }
+         .menu7heading>h4{
+            position:absolute;
+            top:2510px;
+            left:540px;
+            background-color: black;
+            color:orangered;
+            border-radius: 8px;
+            font-size: 10px;
+            width:80px;
+            height:20px;
+            padding-left:8px;
+            padding-top:5px;
+            
+        }
+         .menu8heading>h4{
+            position:absolute;
+            top:2510px;
+            left:760px;
+            background-color: black;
+            color:orangered;
+            border-radius: 8px;
+            font-size: 10px;
+            width:80px;
+            height:20px;
+            padding-left:8px;
+            padding-top:5px;
+            
+        }
+        .sevenblock{
+            display: flex;
+            flex-direction:column;
+            flex-wrap: wrap;
+        }
+        .sub_sevenblock>h1{
+            margin-left:250px;
+            margin-top:10px;
+            font-size: 50px;;
+        }
+        .sub_sevenblock>h5{
+            margin-left:390px;
+            color:red;
+            margin-top:50px;
+        }
+        .chefpictures {
+            display: flex;
+            margin-top: 10px;
+            
+            
+        }
+
+        .firstchefpic {
+            position: relative;
+            margin-left: 20px;
+            width: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .firstchefpic img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-top-left-radius: 60%;
+        }
+        .firstchefpic::after {
+            content: "";
+            position: absolute;
+            inset: 0;                                      
+            top:0; right:0; bottom:0; left:0; 
+            background-color:rgb(0,0,0,0.6);
+            border-top-left-radius: 60%;   
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .firstchefpic:hover::after {
+            opacity: 1;
+        }
+        .firstchefpic .chefname {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height:50px;
+            background: transparent;                     
+            color: white;
+            text-align: center;
+            padding: 12px 0;
+        }
+        .chefname h4, .chefname h5 {
+            margin: 0;
+            background-color: black;
+            
+            
+         }
+
+        .chefname h4 {
+            font-size: 20px;
+        }
+
+        .chefname h5 {
+            font-size: 14px;
+            
+        }
+        .eightblock{
+            height:300px;
+            width:100%;
+            margin-top:40px;
+            border-top-left-radius: 0%;
+            display: flex;
+            justify-content: start;
+            gap:20px;
+            flex-wrap: wrap;
+                
+
+        }
+        .sub_eightblock{
+           margin-left:380px;
+           border-bottom-right-radius: 40%;
+           height:300px;
+           width:450px;
+           display: flex;
+           flex-wrap:wrap;
+           
+           background-color: grey;
+
+        }
+        
+        .partners>img{
+            height:300px;
+            width:400px;
+            position:absolute;
+            border-top-left-radius: 60%;
+            
+        }
+        .partnerscontent{
+            height:100px;
+            
+        }
+        .partnerscontent>h2{
+            padding-top:20px;
+            padding-left:20px;
+            font-size: 15px;;
+        }
+        .partnerscontent>h1{
+            padding-left:25px;
+            padding-top:10px;
+        }
+        .testicontent1{
+             padding-left:30px;
+             margin-top:50px;
+             font-size:10
+        }
+        .testimage{
+            display: flex;
+            flex-direction:row;
+            flex-wrap:wrap
+            
+            
+        }
+        .testimage>img{
+           width:50px;
+           border-radius: 50%;
+           margin-top:20px;
+        }
+        .testname>h2{
+            display:inline-block;
+            margin-left:10px;
+            margin-top:20px;
+        }
+        .testname>h5{
+            margin-left:20px;
+            font-size: 10px;
+            margin-top:5px;
+        }
+        .nineblock{
+            height:800px;
+            width:100%;
+        }
+        .nineblock>h2{
+            margin-top:60px;
+            margin-left:350px;
+            font-size:15px;
+            color:orangered;
+        }
+        .nineblock>h1{
+            margin-left:200px;
+            font-size: 60px;;
+        }
+        .sub_nineblock{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+           
+        }
+        .sub_nineblock img{
+            transition:all 0.5s ease;
+            transform: scale(1.0);
+        }
+        .sub_nineblock img:hover{
+              transform:scale(1.1);
+              
+        }
+        .menuimage1>img{
+              width:280px;
+              margin-left:30px;
+              height:280px;
+              margin-top:10px;
+              position:relative;
+              transition-duration: 2s;
+        }
+        .menuimages1:hover{
+            transform:scale(1.2)
+        }
+        .menuimage2>img{
+            width:280px;
+            margin-left:20px;
+            margin-top:10px;
+            height:280px;
+        }
+        .menuimage3>img{
+            width:280px;
+            margin-left:20px;
+            margin-top:10px;
+            height:280px;
+        }
+        .menu1content{
+            background-color:black;
+            position:absolute;
+            top:3840px;
+            width:280px;
+            margin-left:30px;
+            
+
+        }
+        .menu1content>h5{
+            color:white;
+            margin-left:90px;
+        }
+        .menu1content>h3{
+            color:white;
+        }
+        .menu2content{
+            background-color: black;
+            position:absolute;
+            top:3840px;
+            width:280px;
+            margin-left:20px;
+
+        }
+        .menu2content>h5{
+            color:white;
+            margin-left:90px;
+        }
+        .menu2content>h3{
+            color:white;
+        }
+        .menu3content{
+            position:absolute;
+            background-color: black;
+            top:3840px;
+            width:280px;
+            margin-left:20px;
+        }
+        .menu3content>h5{
+            color:white;
+            margin-left:90px;
+        }
+        .menu3content>h3{
+            color:white;
+        }
+        .tenthblock{
+            width:100%;
+            height:140px;
+            display: flex;
+            /* flex-wrap: wrap; */
+            gap:0;
+        }
+        .tenthblock>img{
+            width:200px;
+            height:140px;
+            
+        }
+        .sub_tenthblock{
+            background-color:grey;
+            height:300px;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            
+            flex-wrap: wrap;
+            width:1050px;
+            flex-direction: row;
+        }
+        .touch{
+            grid-column: 1/2;
+            color:white;
+        }
+        .touch>h1{
+            margin-top:20px;
+            margin-left:10px;
+        }
+        .touch>h5{
+            margin-left:37px;
+            padding-top:20px;
+
+        }
+        .quicklinks{
+            color:white;
+            grid-column: 2/3;
+            
+        }
+        .quicklinks>h5{
+            padding-left:20px;
+            padding-top:20px;
+        }
+        .quicklinks>h1{
+            margin-top:20px;
+        }
+        .morelinks{
+            color:white;
+            grid-column: 3/4;
+        }
+        .morelinks>h1{
+            margin-top:20px;
+
+        }
+        .morelinks>h5{
+            padding-left:20px;
+            padding-top:20px;
+        }
+        .form{
+            grid-column: 4/6;
+            background-color: black;
+            color:white;
+        }
+        .form>h1{
+            margin-left:60px;
+            margin-top:60px;
+            font-size: 20px;
+        }
+        .form>h5{
+            margin-left:26px;
+            font-size: 10px;
+            padding-top:15px;
+        }
+        .form>p{
+            font-size: 14px;
+            margin-left:10px;
+            padding-top: 15px;;
+        }
+        .form>input{
+            margin-left:20px;
+            margin-top:10px;
+            height:40px;
+            width:200px;
+        }
+        .form>h2{
+            margin-left:100px;
+            
+        }
+        .elevenblock{
+            color:white;
+            background-color: black;
+            display: flex;
+            width:1200px;
+            
+
+        }
+        .elevenblock>h1{
+            font-size: 13px;
+            margin-left: 100px;;
+        }
+        .elevenblock>h5{
+           font-size: 10px;
+           padding-top:2px;
+        }
+
+        @media screen and (min-width:320px) and (max-width:425px){
+           .parent{
+              height:50px;
+           }
+           .firstblock{
+            height:800px;
+            width:1000px;
+           }
+           .parent2{
+            margin-left:300px;
+            margin-top:90px;
+           }
+           .secondblock{
+            height:400px;
+            width:1000px;
+           }
+           .about{
+            margin-top:5px;
+            margin-left:350px;
+           }
+           .thirdblock{
+            height:180px;
+            width:990px;
+           }
+           .block>p{
+            font-size: 20px;;
+           }
+           .fourthblock{
+                height:450px;
+                width:1000px;
+           }
+           .testimonial{
+            margin-left:40px;
+           }
+           .menuvariations{
+            margin-left:350px;
+           }
+           .healthyfood{
+            margin-left:660px;
+           }
+           .first>p{
+            font-size: 20px;
+            margin-top:50px;
+            
+           }
+           .third>p{
+            font-size: 20px;
+            margin-left:20px;
+            width:250px;
+
+           }
+           .second{
+            margin-left:40px;
+            height:450px;
+            width:270px;
+           }
+           .hero3{
+              margin-top:10px;
+           }
+            
+        }
+        
+        
+       
+       
+    </style>
+</head>
+<body>
+    <div class="firstblock">
+        <div class="parent">
+            <div class="child1"><b>CHEFER</b></div>
+            <div class="child2">
+                <img src="https://www.nicepng.com/png/detail/90-903587_email-icon-icon-email-orange-png.png" alt="">  
+            </div>
+            <div class="child3">
+                <p>info@example.com</p>
+            </div>
+            <div class="child4">
+                <img src="https://thumbs.dreamstime.com/b/phone-icon-flat-style-vector-illustration-round-orange-ba-background-shadow-96385326.jpg" alt="">
+            </div>
+            <div class="child5">
+                <p>+ 012 345 678</p>
+            </div>
+            <div class="nav">
+                <ul class="nav-items">
+                    <li class="child6">HOME</li>
+                    <li class="child7">ABOUT</li>
+                    <li class="child8">MENU</li>
+                    <li class="child9">CHEFS</li>
+                    <li class="child10">PAGES
+                        <div class="sub_child">
+                            <ul>
+                                <li>Features</li>
+                                <li>Blog post</li>
+                                <li>Testimonical</li>
+                                <li>404 error</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="child11">CONTACT</li>
+                
+                    <div class="parent1">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvz6CaJ2FlG_VbRz7VdPIyvN77mpgGc_h8NQ&s" alt="">
+                        <img src="https://thumbs.dreamstime.com/b/basic-rgb-142178044.jpg" alt="">
+                        <img src="https://cdn.vectorstock.com/i/500p/68/23/linkedin-logo-outline-white-icon-app-editable-vector-56366823.jpg" alt="">
+                    </div>
+                </ul>
+
+            </div>
+        </div>
+        <div class="parent2">
+            <h1>JOHN DOE</h1>
+        </div>
+        <div class="parent3">
+            <div class="first">
+                <img src="./img/hero-2.jpg" alt="" >
+                <p>Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore. 
+                    Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur takimata eirmod.</p>
+            </div>
+            <img  class="second" src="./img/hero-1.jpg" alt="" >
+            <div class="third">
+                <p>Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore. 
+                    Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur takimata eirmod.</p>
+                <img class="hero3" src="./img/hero-3.jpg" alt="" >
+            </div>
+        </div>
+    </div>
+        
+            <div class="secondblock">
+                <div class="seperate">
+                    <div class="chef">
+                        <img src="./img/about-round.jpg" alt="" width="300">
+                    
+                    </div>
+                    <div class="chef2">
+                        <img src="./img/about.jpg" alt="" width="300">
+                    </div>
+                </div>
+                <div class="about">
+                    <div class="block">
+                        <h3>A B O U T  U S</h3>
+                        <h1>COOKING TOGETHER WITH THE EXPERT</h1>
+                        <p>Nonumy erat diam duo labore clita. Sit magna ipsum dolor sed ea duo at ut. Tempor sit lorem sit magna ipsum duo. Sit eos dolor ut sea rebum,
+                        diam sea rebum lorem kasd ut ipsum dolor est ipsum. Et stet amet justo amet clita erat, ipsum sed at ipsum eirmod labore lorem.</p>
+                    </div>
+                    <div class="sub_about">
+                        <div class="features">
+                            <img src="./img/feature-1.png" alt="" width="50">
+                            <h3>Master Chef</h3>
+                                <p>Tempor erat elitr at rebum at at clita aliquyam consetetur.
+                                Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore.</p>
+                        </div>
+                        <div class="features1">
+                            <img src="./img/feature-3.png" alt="" width="50">
+                            <h3>Quality Food</h3>
+                            <p>Tempor erat elitr at rebum at at clita aliquyam consetetur.
+                                Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="thirdblock">
+                <div class="static">
+                     <img src="https://www.pngall.com/wp-content/uploads/12/Red-Star-Symbol.png" alt="" width="30">
+                
+                    <div class="sub_static">
+                        <h3>years</h3>
+                        <h1>1234</h1>
+                    </div>
+                    <div class="people">
+                        <img src="https://static.vecteezy.com/system/resources/previews/000/576/186/original/sign-of-people-icon-vector.jpg" alt="" width="30">
+                    </div>
+                    <div class="sub_people">
+                        <h3>clients</h3>
+                        <h1>1234</h1>
+                    </div>
+                    <div class="tick">
+                        <img src="https://img.myloview.com/posters/red-check-mark-icon-tick-symbol-tick-icon-vector-illustration-700-154216548.jpg" alt="" width="30">
+                    </div>
+                    <div class="sub_tick">
+                        <h3>Awards</h3>
+                        <h1>1234</h1>
+                    </div>
+                    <div class="events">
+                        <img src="http://www.clker.com/cliparts/O/P/Y/O/h/P/red-coffee-mug-hi.png" alt="" width="30">
+                    </div>
+                    <div class="sub_events">
+                        <h3>Events</h3>
+                        <h1>1234</h1>
+                    </div>
+                </div>
+
+
+            </div>
+            
+            <div class="fourthblock">
+                <div  class="testimonial">
+                      <img src="./img/feature-1.png" alt="" width="90">
+                      <div class="chefexperience">
+                        <h3>Best Chef</h3>
+                        <p>Sed amet tempor amet sit kasd sea lorem dolor ipsum elitr dolor amet kasd elitr duo vero amet amet stet</p>
+                        <h6>Read More</h6>
+                      </div>
+                </div>
+                <div class="menuvariations">
+                    <img src="./img/feature-2.png" alt="" width="90">
+                    <div class="sub_menuvariations">
+                        <h3>Menu Variation</h3>
+                        <p>Sed amet tempor amet sit kasd sea lorem dolor ipsum elitr dolor amet kasd elitr duo vero amet amet stet</p>
+                        <h6>Read More</h6>
+                    </div>
+                </div>
+                <div class="healthyfood">
+                    <img src="./images/image6.png" alt="" width="90">
+                    <div class="sub_healthyfood">
+                        <h3>Healthy Food</h3>
+                        <p>Sed amet tempor amet sit kasd sea lorem dolor ipsum elitr dolor amet kasd elitr duo vero amet amet stet</p>
+                        <h6>Read More</h6>
+                    </div>
+                </div>
+                <div class="order">
+                    <div class="heading">
+                        <h2>30% Discount</h2>
+                        <h1>For This Summer</h1>
+                         <h5>Order now</h5>
+                    </div>
+                    <div class="now">
+                        <h5>Order now</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="fifthblock">
+                <div class="sub_fifthblock">
+                    <h4>O U R   M E NU</h4>
+                    <h1>Hands  Crafts  More  Than Meals</h1>
+                    
+                </div>
+                <div class="menu">
+                    <div class="breakfast">
+                        <h5>breakfast</h5>
+                        
+                    </div>
+                    <div class="lunch">
+                        <h5>lunch</h5>
+                    </div>
+                    <div class="dinner">
+                        <h5>dinner</h5>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="sixbloock">
+                <div class="fooditems">
+                    <!-- <img src="./img/menu-2.jpg" alt="">
+                    <div class="label">BBQ Chicken</div>
+                    <div class="fooditems">
+                        <img src="./img/menu-3.jpg" alt="">
+                        <div class="label">
+                            BBQ Chicken
+                        </div> -->
+                    
+                     <img src="./img/menu-2.jpg" alt="">
+                     <img src="./img/menu-3.jpg" alt="">
+                     <img src="./img/menu-4.jpg" alt="">
+                     <img src="./img/menu-5.jpg" alt="">
+                     <img src="./img/menu-6.jpg" alt="">
+                     <img src="./img/menu-7.jpg" alt="">
+                     <img src="./img/menu-8.jpg" alt="">
+                     <img src="./img/menu-1.jpg" alt="">
+                    <div class="menu1heading">
+                        <h4>BBQ Chicken</h4>
+                    </div>
+                    <div class="menu2heading">
+                        <h4>BBQ Chicken</h4>
+                    </div>
+                    <div class="menu3heading">
+                        <h4>BBQ Chicken</h4>
+                    </div>
+                    <div class="menu4heading">
+                        <h4>BBQ Chicken</h4>
+                    </div>
+                    <div class="menu5heading">
+                        <h4>BBQ Chicken</h4>
+                    </div>
+                    <div class="menu6heading">
+                        <h4>BBQ Chicken</h4>
+                    </div>
+                    <div class="menu7heading">
+                        <h4>BBQ Chicken</h4>
+                    </div>
+                    <div class="menu8heading">
+                        <h4>BBQ Chicken</h4>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="sevenblock">
+                <div class="sub_sevenblock">
+                    <h5>E X P E R T   C H E F</h5>
+                    <h1>Lets Meets The Expert</h1>
+                </div>
+                <sub class="chefpictures">
+                    <div class="firstchefpic">
+                        <img src="./img/team-1.jpg" alt="">
+                        <div class="chefname">
+                            <h4>John Doe</h4>
+                            <h5>M A S T E R  C H E F</h5>
+                        </div>
+                    </div>
+                    <div class="firstchefpic">
+                        <img src="./img/team-2.jpg" alt="">
+                        <div class="chefname">
+                            <h4>John Doe</h4>
+                            <h5>A S S I S T A N T</h5>
+                        </div>
+                    </div>
+                    <div class="firstchefpic">
+                        <img src="./img/team-3.jpg" alt="">
+                        <div class="chefname">
+                            <h4>John Doe</h4>
+                            <h5>A S S I S T A N T</h5>
+                        </div>
+                    </div>
+                </sub>
+            </div>
+            <div class="eightblock">
+                
+                <div class="partners">
+                    <img src="./img/testimonial.jpg" alt="">
+                </div>
+                <div class="sub_eightblock">
+                    <div class="partnerscontent">
+                        <h2>T E S T I M O N I A L</h2>
+                        <h1>OUR CLIENT SAYS</h1>
+                        <div class="testicontent1">
+                            <p>Dolores sed duo clita tempor justo dolor at set lorem ksad labore dolore lorem ispum.
+                                At lorem lorem magna ut et,nunumy et lobore et tempoer diam tempor irat dolor rebum
+                                sit ispum</p>
+                                <div class="testimage">
+                                    <img src="./img/testimonial-1.jpg" alt="">
+                                    <div class="testname">
+                                       <h2>client name</h2>
+                                       <h5>P R O F E S S I O N</h5>
+                                    </div>
+                                    
+                                </div>
+                        </div>
+                        
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="nineblock">
+                <h2>O U R     B L O G</h2>
+                <h1>Latest Articles From Food Blogs</h1>
+                <div class="sub_nineblock">
+                    <div class="menuimage1">
+                        <img src="./img/menu-3.jpg" alt="">
+                        <div class="menu1content">
+                            <h5>01 january 2045</h5>
+                            <h3>sed amet tempor amet sit ksad sea lorem</h3>
+                        </div>
+                    </div>
+                    <div class="menuimage2">
+                        <img src="./img/menu-5.jpg" alt="">
+                        <div class="menu2content">
+                            <h5>01 january 2045</h5>
+                            <h3>sed amet tempor amet sit ksad sea lorem</h3>
+                        </div>
+                    </div>
+                    <div class="menuimage3">
+                        <img src="./img/menu-7.jpg" alt="">
+                        <div class="menu3content">
+                            <h5>01 january 2045</h5>
+                            <h3>sed amet tempor amet sit ksad sea lorem</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tenthblock">
+                <img src="./img/menu-2.jpg" alt="">
+                <img src="./img/menu-3.jpg" alt="">
+                <img src="./img/menu-4.jpg" alt="">
+                <img src="./img/menu-5.jpg" alt="">
+                <img src="./img/menu-6.jpg" alt="">
+                <img src="./img/menu-7.jpg" alt="">
+                
+                
+            </div>
+            <div class="sub_tenthblock">
+                <div class="touch">
+                    <h1>Get In Touch</h1>
+                    <h5>123 street ,newyork,usa</h5>
+                    <h5>info@gmail.com</h5>
+                    <h5>+012 345 67890</h5>
+                </div>
+                <div class="quicklinks">
+                    <h1>Quick Links</h1>
+                    <h5>Home</h5>
+                    <h5>About us</h5>
+                    <h5>Food Menu</h5>
+                    <h5>Our Chefs</h5>
+                    <h5>Latest Blog</h5>
+                    <h5>Contact Us</h5>
+                </div>
+                <div class="morelinks">
+                    <h1>More Links </h1>
+                    <h5>Home</h5>
+                    <h5>About us</h5>
+                    <h5>Food Menu</h5>
+                    <h5>Our Chefs</h5>
+                    <h5>Latest Blog</h5>
+                    <h5>Contact Us</h5>
+                </div>
+                <div class="form">
+                    <h1>News letter</h1>
+                    <h5>SCUBSCRIBE OUR NEWS LETTER</h5>
+                    <P>Amet justo diam dolor rebum lorem sit stet sea justo ksad </P>
+                    <input type="email" placeholder="YOUR EMAIL" pattern="[A-z][a-z]+[1-9]+[@#$%^&*]" required>
+                    <h2><input type="submit" value="signup"></h2>
+                </div>
+            </div>
+            <div class="elevenblock">
+                <h1>your site name.</h1>
+                <h5>All Rights Reserved.Disrtibuted By Theme wagon</h5>
+                
+            </div>
+            
+        
+       
+    
+</body>
+</html>
