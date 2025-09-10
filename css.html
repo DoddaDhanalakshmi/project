@@ -154,7 +154,7 @@
         .parent3{
             display: grid;
             grid-template-columns: repeat(3,1fr);
-            /* gap:5px; */
+            
             margin-left:80px;
             margin-top:70px;
 
@@ -162,12 +162,11 @@
         .parent3 .first, .third{
             display: flex;
             flex-direction: column;
-            /* align-items: center; */
+           
         }
         .parent3 img{
             border-radius: 8px;
             /* object-fit: cover; */
-            /* margin-top:30px; */
             
         }
         .first img{
@@ -212,27 +211,9 @@
             font-size: 20px;
             height:250px;
         }
-        /* .second{
-            height: 380px;
-            margin-left:100px;
-            margin-top: 30px;
-            width:280px;
-        }
-        .third{
-            height:380px;
-        }
-        .third p{
-            margin-top: 30px;
-            margin-left:-10px;
-            width:230px;
-        }
-        .third img{
-            margin-top:70px;
-            width:250px
-             */
-        }
+       
         .secondblock{
-                height:400px;
+                height:600px;
                 width:100%;
                 display: flex;
                 justify-content: start;
@@ -241,9 +222,9 @@
                 margin-top: 40px;
         }
         .chef img{
-            height:100px;
-            width:100px;
-            margin-left: 30px;
+            height:300px;
+            width:300px;
+            margin-left: 40px;
             position:absolute;
             z-index: 5;
             animation:rotate 5s linear infinite;  
@@ -268,16 +249,17 @@
             border-bottom-right-radius: 5px;
             border-bottom-left-radius:5px;
             border-top-right-radius: 5px;
-            height:350px;
+            height:750px;
+            width:700px;
             
            
             
         }
         .about{
-           margin-left:330px;
+           margin-left:730px;
            margin-top:10px;
-           height:100px;
-           width:400px;
+           height:700px;
+           width:700px;
            display: flex;
            flex-wrap:wrap;
            gap:10px;
@@ -285,14 +267,17 @@
         }
         .block>h3{
             color:red;
+            font-size: 30px;;
         }
         .block>h1{
             padding-left:5px;
             padding-top:9px;
+            font-size: 50px;;
         }
         .block>p{
-            font-size: 10px;
-            padding-top:15px;
+            font-size: 30px;
+            padding-top:30px;
+            height:100px
         }
         .sub_about{
             display: flex;
@@ -300,50 +285,64 @@
             gap:10px;
         }
         .features{
-            height:189px;
-            width:230px;
+            height:300px;
+            width:330px;
             background-color:whitesmoke;
             border-radius: 5px;
+            margin-top:180px;
+
             
         }
         .features>img{
             margin-left:10px;
             border-radius: 50%;
             background-color:orangered;
-            margin-top: 10px;    
+            margin-top: 10px;   
+            width:100px 
         }
         .features>h3{
-            margin-left: 12px;
+            margin-left: 20px;
+            height:20px;
+            width:330px;
+            font-size: 30px;
         }
         .features>p{
             margin-left: 12px;
-            font-size: 12px;
+            font-size: 20px;
             padding-top:16px;
         }
         .features1{
-            height:185px;
-            width:230px;
-            
+            height:300px;
+            width:330px;
+            margin-top:180px;
             background-color: whitesmoke;
-            border-radius: 5px;;
+            border-radius: 5px;
+            margin-left:20px;
         }
         .features1>img{
             background-color: orangered;
             border-radius: 50%;
             margin-left:12px;
             margin-top:10px;
+            width:100px
         }
         .features1>h3{
-            margin-left:12px;
+            margin-left:20px;
+            height:20px;
+            width:330px;
+            font-size: 30px;
         }
         .features1>p{
-            font-size:12px;
+            font-size:20px;
             margin-left: 12px;
             padding-top:16px;
+            
         }
         .thirdblock{
-            height:180px;
+            margin-top:200px;
+            height:200px;
             width:99%;
+            
             background-color: black;
            
         }
@@ -355,7 +354,7 @@
         .static>img{
             border-radius: 50%;
             background-color: white;
-            margin-left:50px;
+            margin-left:150px;
             margin-top: 50px;
             width:60px;
             height:80px;
@@ -377,7 +376,7 @@
         .people>img{
             border-radius: 50%;
             background-color: white;
-            margin-left:50px;
+            margin-left:170px;
             margin-top:50px;
             height:80px;
             width:60px;
@@ -400,7 +399,7 @@
         .tick>img{
             border-radius: 50%;
             background-color: white;
-            margin-left:50px;
+            margin-left:170px;
             margin-top:50px;
             height:80px;
             width:60px;
@@ -423,7 +422,7 @@
         .events>img{
                border-radius: 50%;
             background-color: white;
-            margin-left:50px;
+            margin-left:170px;
             margin-top:50px;
             height:80px;
             width:60px;
@@ -443,28 +442,30 @@
             margin-left:28px;
         }
         .fourthblock{
-            height:450px;
+            height:650px;
             width:100%;
             margin-top:100px;
             background-color:black;
             display: flex;
+            margin-top:100px;
             flex-direction: row;
         }
         .testimonial{
-            height:250px;
-            width:260px;
+            height:450px;
+            width:460px;
             background-color: aqua;
             position: absolute;
-            top:1400px;
-            margin-left:20px;
+            top:1990px;
+            margin-left:30px;
             border-radius: 8px;
            
         }
         .testimonial>img{
             background-color: white;
             border-radius: 50%;
-            margin-left:82px;
+            margin-left:102px;
             margin-top:20px;
+            width:200px;
 
         }
         .chefexperience{
@@ -473,28 +474,33 @@
         }
         .chefexperience>h3{
             color:black;
-            padding-left:80px;
+            padding-left:120px;
             padding-top:20px;
+            font-size:40px;
         }
         .chefexperience>p{
             padding-left:20px;
-            font-size: 12px;
+            font-size: 30px;
+            height:100px;
+            width:460px;
             padding-top: 10px;
         }
         .chefexperience>h6{
-            padding-left:90px;
+            padding-left:160px;
             color:orange;
+            font-size: 20px;
+            padding-top:20px;
         }
         .chefexperience>h6:hover{
             color:red;
         }
         .menuvariations{
             background-color: aqua;
-            height:250px;
-            width:260px;
-            margin-left:300px;
+            height:450px;
+            width:460px;
+            margin-left:520px;
             position:absolute;
-            top:1400px;
+            top:1990px;
             border-radius: 8px;
 
 
@@ -502,23 +508,30 @@
         .menuvariations>img{
              background-color: white;
             border-radius: 50%;
-            margin-left:82px;
+            width:180px;
+            margin-left:102px;
             margin-top:20px;
         }
         .sub_menuvariations>h3{
             color:black;
-            padding-left:80px;
-            padding-top:20px;
+            padding-left:120px;
+            padding-top:30px;
+            font-size:40px
 
         }
         .sub_menuvariations>p{
             padding-left:20px;
-            font-size: 12px;
-            padding-top: 10px;
+            font-size: 30px;
+            padding-top: 15px;
+            height:100px;
+            width:460px;
         }
         .sub_menuvariations>h6{
-            padding-left:90px;
+            padding-left:160px;
             color:orange;
+            font-size: 20px;
+            padding-top:25px;
+
 
         }
         .sub_menuvariations>h6:hover{
@@ -526,33 +539,40 @@
         }
         .healthyfood{
             background-color: aqua;
-            height:250px;
-            width:250px;
-            margin-left:580px;
+            height:450px;
+            width:460px;
+            margin-left:1010px;
             position:absolute;
-            top:1400px;
+            top:1990px;
             border-radius: 8px;;
         }
         .healthyfood>img{
              background-color: white;
             border-radius: 50%;
-            margin-left:82px;
+            margin-left:102px;
             margin-top:20px;
+            width:180px;
+
         }
         .sub_healthyfood>h3{
             color:black;
-            padding-left:80px;
-            padding-top:20px;
+            padding-left:120px;
+            padding-top:25px;
+            font-size: 40px;;
 
         }
         .sub_healthyfood>p{
             padding-left:20px;
-            font-size: 12px;
-            padding-top: 10px;
+            font-size: 30px;
+            padding-top: 15px;
+            height:100px;
+            width:460px;
         }
         .sub_healthyfood>h6{
-            padding-left:90px;
+            padding-left:160px;
             color:orange;
+            font-size: 20px;
+            padding-top: 25px;;
 
         }
         .sub_healthyfood>h6:hover{
@@ -561,22 +581,27 @@
         .order{
             display:flex;
             flex-direction: wrap;
+            margin-left: 310px;
+            padding-top:5px;
+        
            
         }
-        .heading>h2{
+         .heading>h2{
             color:white;
-            padding-left:365px;
-            padding-top: 250px;;
+            padding-left:340px;
+            padding-top: 420px;
+            font-size:40px
         }
         .heading>h1{
              color:white;
-             padding-left:320px;
+             padding-left:280px;
              padding-top:10px;
+             font-size: 60px;;
         }
         .heading>h5{
             color:white;
-            margin-left:390px;
-            margin-right:250px;
+            margin-left:430px;
+            margin-right:340px;
             padding-left:10px;
             border-radius:8px;
             height:50px;
@@ -586,37 +611,38 @@
             margin-top: 20px;;
             background-color: orangered;
         }
-        .heading>h5:hover{
+        .heading>h5:hover{ 
             background-color: orange;
             color:black;
         }
         .fifthblock{
-                height:200px;
+                height:300px;
                 width:100%;
+                margin-top:80px;
         }
         .sub_fifthblock>h4{
             color:red;
-            margin-left:370px;
+            margin-left:730px;
             margin-top:50px;
 
         }
         .sub_fifthblock>h1{
-            margin-left:300px;
+            margin-left:660px;
             width:400px;
             margin-top:10px;
-            font-size: 40px;
+            font-size: 50px;
         }
         .menu{
             display: flex;
             flex-wrap: wrap;
             flex-direction: column;
             align-items: center;
-            margin-left:320px;
+            margin-left:670px;
             margin-right:300px;
-            height:30px;
+            height:40px;
             margin-top:20px;
             background-color: black;
-            width:30%;
+            width:300px;
             padding-right:200px;
             border-radius: 10px;;
             
@@ -624,27 +650,27 @@
         .breakfast>h5{
             color:white;
             padding-left:13px;
-            padding-top: 7px;
+            padding-top: 9px;
             width:100px;
-            height:30px;
+            height:40px;
             background-color: orange;
             border-radius:8px;
           
         }
         .lunch>h5{
             color:white;
-            padding-left:20px;
-            padding-top:7px;
+            padding-left:30px;
+            padding-top:9px;
             width:90px;
-            height:30px;
+            height:40px;
             border-radius:8px;
         }
         .dinner>h5{
             color:white;
-            padding-left:10px;
-            padding-top:7px;
+            padding-left:20px;
+            padding-top:9px;
             width:70px;
-            height:30px;
+            height:40px;
             border-radius: 8px;
         }
         .lunch>h5:active{
@@ -658,6 +684,7 @@
             width:100%;
             display: flex;
             flex-direction: column; 
+            padding-top:100px;
         }
         .fooditems{
             width:100%;
@@ -665,11 +692,12 @@
            
         .fooditems>img{
             height:200px;
-            width:210px;
+            width:370px;
             position:relative;
             transition:all 0.5s ease;
             background-color: grey;
-           
+            display: inline-block;
+            gap:0px;
 
             
         } 
@@ -680,8 +708,8 @@
    
         .menu1heading>h4{
             position:absolute;
-            top:2310px;
-            left:120px;
+            top:3220px;
+            left:250px;
             background-color: black;
             color:orangered;
             border-radius: 8px;
@@ -694,8 +722,8 @@
         }
          .menu2heading>h4{
             position:absolute;
-            top:2310px;
-            left:320px;
+            top:3220px;
+            left:630px;
             background-color: black;
             color:orangered;
             border-radius: 8px;
@@ -708,7 +736,7 @@
         }
          .menu3heading>h4{
             position:absolute;
-            top:2310px;
+            top:3320px;
             left:540px;
             background-color: black;
             color:orangered;
@@ -722,7 +750,7 @@
         }
          .menu4heading>h4{
             position:absolute;
-            top:2310px;
+            top:3320px;
             left:760px;
             background-color: black;
             color:orangered;
