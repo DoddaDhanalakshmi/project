@@ -14,6 +14,7 @@
             height:890px;
             width:100%;
             background-color:grey;
+            box-sizing: border-box;
         }
 
         .parent{
@@ -1191,76 +1192,904 @@
            font-size: 10px;
            padding-top:12px;
         }
-
-        @media screen and (min-width:320px) and (max-width:425px){
-           .parent{
-              height:50px;
-           }
+        @media  screen and (min-width:320px) and (max-width:425px) {
            .firstblock{
-            height:800px;
-            width:1000px;
+            height:6300px;
+            width:1700px;
+            
+
+           }
+           .child1{
+            display:none
+           }
+           .child2{
+            display: none;
+           }
+           .child3{
+            display: none;
+           }
+           .child4{
+            display: none;
+           }
+           .child5{
+            display: none;
+           }
+           .nav{
+            display: none;
            }
            .parent2{
-            margin-left:300px;
-            margin-top:90px;
+               font-size:60px;
+               padding-right:20px;
            }
-           .secondblock{
-            height:400px;
-            width:1000px;
+           .parent3{
+            display: block;
+            margin-left:60px;
            }
-           .about{
-            margin-top:5px;
-            margin-left:350px;
+           .first img{
+            width:1400px;;
+            height:auto;
            }
-           .thirdblock{
-            height:180px;
-            width:990px;
-           }
-           .block>p{
-            font-size: 20px;;
-           }
-           .fourthblock{
-                height:450px;
-                width:1000px;
-           }
-           .testimonial{
-            margin-left:40px;
-           }
-           .menuvariations{
-            margin-left:350px;
-           }
-           .healthyfood{
-            margin-left:660px;
-           }
-           .first>p{
-            font-size: 20px;
-            margin-top:50px;
-            
-           }
-           .third>p{
-            font-size: 20px;
-            margin-left:20px;
-            width:250px;
-
+           .first p{
+            width:1400px;
+            height:800px;
+            font-size: 100px;;
            }
            .second{
-            margin-left:40px;
-            height:450px;
-            width:270px;
+            width:1400px;
+            height:auto ;
+            margin-top:200px;
            }
-           .hero3{
-              margin-top:10px;
+           .third p{
+            width:1400px;
+            height:800px;
+            font-size: 100px;;
            }
+           .third img{
+             width:1400px;
+            height:auto ;
+            margin-top:200px;
+           }
+           .secondblock{
+            display: block;
+           }
+           .seperate{
+            width:1400px;
+            height:auto;
+            margin-top:100px;
+            display: block
+          
+           }
+           .about{
+            display: block;
+            margin-left:0px;
+            padding-top:1700px;
+            
+           }
+           .chef img{
+            margin-left:150px;
+           }
+           .chef2 img{
+            width:1400px;
+            height:auto
+           }
+           .block{
+            width:1400px;
+            height:600px;
+            font-size:120px;
+           }
+           .block h3{
+              margin-left:600px;
+              font-size: 60px;;
+           }
+           .block h1{
+            margin-left:200px;
+            font-size: 50px;
+            padding-top:30px;
+           }
+           .block p{
+            font-size: 100px;
+            margin-left:60px;
+            width:1400px;
+           }
+
+            .sub_about{
+           display: block;
+        }
+        .features{
+         height:2000px;
+         width:1400px;
+         background-color: whitesmoke;
+         margin-top:650px;
+         margin-left:60px
             
         }
-        
-        
+        .features>img{
+            margin-left:300px;
+            border-radius: 50%;
+            background-color:orangered;
+            margin-top: 100px;   
+            width:600px; 
+        }
+        .features>h3{
+            margin-left: 350px;
+            height:500px;
+            padding-top:200px;
+            width:1400px;
+            font-size: 100px;
+        }
+        .features>p{
+            margin-left: 12px;
+            font-size: 100px;
+            margin-bottom:590px;
+        }
+        .features1{
+            height:2000px;
+            width:1400px;
+            margin-top:180px;
+            background-color:whitesmoke;
+            border-radius: 5px;
+            margin-left:60px;
+        }
+        .features1>img{
+             margin-left:300px;
+            border-radius: 50%;
+            background-color:orangered;
+            margin-top: 100px;   
+            width:600px; 
+        }
+        .features1>h3{
+            margin-left: 350px;
+            height:500px;
+            padding-top:200px;
+            width:1400px;
+            font-size: 100px;
+        }
+        .features1>p{
+           margin-left: 12px;
+            font-size: 100px;
+            margin-bottom:590px;
+        }
+        .thirdblock{
+            margin-top:6600px;
+            height:2500px;
+            width:1400px;
+            margin-left: 60px;
+            display: block;
+            background-color: black;  
+        }
+        .static{
+            display: flex;
+            flex-direction:row;
+            flex-wrap: wrap;
+        }
+        .static>img{
+            border-radius: 50%;
+            background-color: white;
+            margin-left:210px;
+            margin-top: 100px;
+            width:300px;
+            height:380px;
+        }
+        .sub_static{
+            display: flex;
+            flex-direction: column;
+            font-size: 80px;
+        }
+        .sub_static>h3{
+            color:white;
+            margin-top:120px;
+            margin-left: 90px;;
+        }
+        .sub_static>h1{
+            color:white;
+            margin-left:108px;
+            padding-top:10px
+        }
+        .people>img{
+            border-radius: 50%;
+            background-color: white;
+            margin-left:245px;
+            margin-top: 150px;
+            width:300px;
+            height:380px;
+        }
+        .sub_people{
+           display: flex;
+            flex-direction: column;
+            font-size: 80px;
+        }
+        .sub_people>h3{
+          color:white;
+            margin-top:200px;
+            margin-left: 90px;;
+        }
+        .sub_people>h1{
+            color:white;
+            padding-top:10px;
+            margin-left:108px;
+        }
+        .tick>img{
+           border-radius: 50%;
+            background-color: white;
+            margin-left:245px;
+            margin-top: 200px;
+            width:300px;
+            height:380px;
+        }
+        .sub_tick{
+          display: flex;
+            flex-direction: column;
+            font-size: 80px;
+        }
+        .sub_tick>h3{
+           color:white;
+            margin-top:200px;
+            margin-left: 90px;;
+        }
+        .sub_tick>h1{
+             color:white;
+            padding-top:10px;
+            margin-left:108px;
+        }
+        .events>img{
+             border-radius: 50%;
+            background-color: white;
+            margin-left:245px;
+            margin-top: 250px;
+            width:300px;
+            height:380px;
+        }
+        .sub_events{
+          display: flex;
+            flex-direction: column;
+            font-size: 80px;
+        }
+        .sub_events>h3{
+           color:white;
+            margin-top:200px;
+            margin-left: 90px;;
+        }
+        .sub_events>h1{
+             color:white;
+            padding-top:10px;
+            margin-left:108px;
+        }
+        .fourthblock{
+            height:5000px;
+            width:1400px;
+            margin-left:60px;
+            margin-top:9000px;
+            background-color:black;
+            display: flex;
+            margin-top:100px;
+            flex-direction: row;
+        }
+        .testimonial{
+            height:1250px;
+            width:1300px;
+            background-color: aqua;
+            position: absolute;
+            top:16150px;
+            margin-left:30px;
+            border-radius: 8px;
+        }
+        .testimonial>img{
+            background-color: white;
+            border-radius: 50%;
+            margin-left:382px;
+            margin-top:20px;
+           width:600px;
+        }
+        .chefexperience{
+            display:block;  
+        }
+        .chefexperience>h3{
+            color:black;
+            padding-left:520px;
+            padding-top:20px;
+            font-size:80px;
+        }
+        .chefexperience>p{
+            padding-left:400px;
+            font-size: 60px;
+            height:300px;
+            width:1060px;
+            padding-top: 10px;
+        }
+        .chefexperience>h6{
+            padding-left:520px;
+            color:orange;
+            font-size: 80px;
+            padding-top:20px;
+        }
+        .chefexperience>h6:hover{
+            color:red;
+        }
+        .menuvariations{
+                height:1250px;
+            width:1300px;
+            background-color: aqua;
+            position: absolute;
+            top:17750px;
+            margin-left:30px;
+            border-radius: 8px;
+        }
+        .menuvariations>img{
+             background-color: white;
+            border-radius: 50%;
+            margin-left:382px;
+            margin-top:20px;
+            width:600px;
+        }
+        .sub_menuvariations>h3{
+            color:black;
+            padding-left:420px;
+            padding-top:20px;
+            font-size:80px;
+        }
+        .sub_menuvariations>p{
+             padding-left:400px;
+            font-size: 60px;
+            height:300px;
+            width:1060px;
+            padding-top: 10px;
+        }
+        .sub_menuvariations>h6{
+           padding-left:520px;
+            color:orange;
+            font-size: 80px;
+            padding-top:20px;
+        }
+        .sub_menuvariations>h6:hover{
+            color:red;
+        }
+         .healthyfood{
+           height:1250px;
+            width:1300px;
+            background-color: aqua;
+            position: absolute;
+            top:19350px;
+            margin-left:30px;
+            border-radius: 8px;
+        }
+        .healthyfood>img{
+            background-color: white;
+            border-radius: 50%;
+            margin-left:382px;
+            margin-top:20px;
+            width:600px;
+
+        }
+        .sub_healthyfood>h3{
+          color:black;
+            padding-left:470px;
+            padding-top:20px;
+            font-size:80px;
+
+        }
+        .sub_healthyfood>p{
+             padding-left:400px;
+            font-size: 60px;
+            height:300px;
+            width:1060px;
+            padding-top: 10px;
+        }
+        .sub_healthyfood>h6{
+           padding-left:520px;
+            color:orange;
+            font-size: 80px;
+            padding-top:20px;
+
+        }
+        .sub_healthyfood>h6:hover{
+            color:red;
+        } 
+        .order{
+            display:flex;
+            flex-direction: wrap;
+            margin-left: 310px;
+            padding-top:5px;
+        }
+         .heading>h2{
+            color:red;
+            padding-left:200px;
+            padding-top: 4520px;
+            font-size:100px
+        }
+        .heading>h1{
+             color:white;
+             padding-left:180px;
+             padding-top:10px;
+             font-size: 80px;;
+        }
+        .heading>h5{
+            color:white;
+            margin-left:330px;
+            margin-right:340px;
+            padding-left:10px;
+            border-radius:8px;
+            height:100px;
+            width:220px;
+            font-size:40px;
+            padding-top:20px;
+            background-color: orangered;
+        }
+        .heading>h5:hover{ 
+            background-color: orange;
+            color:black;
+        }
+        .fifthblock{
+                height:500px;
+                width:1400px;
+                margin-top:80px;
+        }
+        .sub_fifthblock>h4{
+            color:red;
+            margin-left:600px;
+            margin-top:50px;
+            font-size: 60px;
+        }
+        .sub_fifthblock>h1{
+            margin-left:200px;
+            width:1400px;
+            margin-top:10px;
+            font-size: 90px;
+        }
+        .menu{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            margin-left:200px;
+            margin-right:300px;
+            height:100px;
+            margin-top:20px;
+            background-color: black;
+            width:1200px;
+            padding-right:200px;
+            border-radius: 10px;;
+        }
+        .breakfast>h5{
+            color:white;
+            padding-top: 9px;
+            width:400px;
+            height:100px;
+            background-color: orange;
+            border-radius:8px;
+            font-size: 60px;;
+        }
+        .lunch>h5{
+            color:white;
+            padding-left:10px;
+            padding-top:9px;
+            width:400px;
+            height:100px;
+            border-radius:8px;
+            font-size:60px;
+        }
+        .dinner>h5{
+            color:white;
+            padding-left:10px;
+            padding-top:9px;
+            width:400px;
+            height:100px;
+            border-radius: 8px;
+            font-size:60px;
+        }
+        .lunch>h5:active{
+            background-color: orange;
+        }
+        .dinner>h5:active{
+            background-color: orange;
+        }
+        .sixblock{
+            height:400px;
+            width:100%;
+            display: flex;
+            flex-direction: column; 
+            padding-top:100px;
+        }
+        .fooditems{
+            width:100%;
+        }
+        .fooditems>img{
+            height:auto;
+            width:1400px;
+            position:relative;
+            transition:all 0.5s ease;
+            background-color: grey;
+            display: inline-block;
+            gap:0px;
+            margin-left:60px; 
+        } 
+          .fooditems:hover{
+          transform:scale(1.1) 
+        }
+        .menu1heading>h4{
+            display: none; 
+        }
+         .menu2heading>h4{
+            display: none;
+        }
+         .menu3heading>h4{
+            display: none; 
+        }
+         .menu4heading>h4{
+            display: none; 
+        }
+         .menu5heading>h4{
+            display: none; 
+        }
+         .menu6heading>h4{
+            display: none; 
+        }
+         .menu7heading>h4{
+            display: none;
+        }
+         .menu8heading>h4{
+            display: none; 
+        }
+        .sevenblock{
+            display: flex;
+            flex-direction:column;
+            flex-wrap: wrap;
+            width:1500px;;
+            margin-top:100px;      
+        }
+        .sub_sevenblock>h1{
+            margin-left:250px;
+            margin-top:10px;
+            font-size: 100px;
+        }
+        .sub_sevenblock>h5{
+            margin-left:420px;
+            color:red;
+            margin-top:50px;
+            font-size:80px;;
+        }
+        .chefpictures {
+            display:block;
+            margin-top: 50px;
+            width:1700px;  
+        }
+        .firstchefpic {
+            position: relative;
+            margin-left: 40px;
+            width: 1450px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .firstchefpic img {
+            display: block;
+            width: 100%;
+            height: auto;
+            gap:200px;
+            border-top-left-radius: 60%;
+        }
+        .firstchefpic::after {
+            content: "";
+            position: absolute;
+            inset: 0;                                      
+            top:0; right:0; bottom:0; left:0; 
+            background-color:rgb(0,0,0,0.6);
+            border-top-left-radius: 60%;   
+            opacity: 0;
+            
+            transition: opacity 0.4s ease;
+        }
+        .firstchefpic:hover::after {
+            opacity: 1;
+           
+        }
+        .firstchefpic .chefname {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 1450px;;
+            height:400px;
+            background: transparent;                     
+            color: white;
+            text-align: center;
+            padding: 12px 0;
+        }
+        .chefname h4, .chefname h5 {
+            margin:0;
+            background-color: black;
+            height:200px;
+            width:1450px;
+         }
+        .chefname h4 {
+            font-size: 80px;
+            padding-top:100px;
+        }
+
+        .chefname h5 {
+            font-size: 30px;
+            
+        }
+        .eightblock{
+            height:300px;
+            width:1500px;;
+            margin-top:100px;
+            border-top-left-radius: 0%;
+            margin-left:60px;
+        }
+        .sub_eightblock{
+           margin-left:0px;
+           border-bottom-right-radius: 40%;
+           height:2300px;;
+           width:1500px;;
+           background-color: grey;
+           padding-top:1100px;
+           border-top-left-radius:60%;
+        }
+        .partners>img{
+            height:auto;
+            width:1500px;
+            position:absolute;
+            border-top-left-radius: 60%;
+        }
+        .partnerscontent{
+            height:2000px;  
+            width:1400px; 
+        }
+        .partnerscontent>h2{
+            padding-top:10px;
+            padding-left:20px;
+            font-size: 100px;;
+        }
+        .partnerscontent>h1{
+            padding-left:15px;
+            font-size: 90px;
+            padding-top:10px;
+        }
+        .testicontent1{
+             padding-left:30px;
+             margin-top:50px;
+             font-size:60px;
+             height:100px;
+             width:1400px;
+        }
+        .testimage{
+            display: flex;
+            flex-direction:row;
+            flex-wrap:wrap 
+        }
+        .testimage>img{
+           width:400px;
+           border-radius: 50%;
+           margin-top:20px;
+        }
+        .testname>h2{
+            display:inline-block;
+            margin-left:10px;
+            font-size:100px;
+            margin-top:70px;
+        }
+        .testname>h5{
+            margin-left:30px;
+            font-size: 45px;
+            margin-top:5px;
+        }
+        .nineblock{
+            height:2000px;
+            width:1400px;
+            margin-top:2100px;
+            margin-left:60px;
+        }
+        .nineblock>h2{
+            margin-top:60px;
+            margin-left:450px;
+            font-size:100px;
+            color:orangered;
+        }
+        .nineblock>h1{
+            margin-left:300px;
+            font-size: 70px;
+        }
+        .sub_nineblock{
+            display: block;
+            margin-top:60px;   
+        }
+        .sub_nineblock img{
+            transition:all 0.5s ease;
+            transform: scale(1.0);
+            margin-top:120px; 
+        }
+        .sub_nineblock img:hover{
+              transform:scale(1.1);
+              
+        }
+        .menuimage1>img{
+              width:1500px;
+              margin-left:30px;
+              height:auto;
+              margin-top:10px;
+              position:relative;
+              transition-duration: 2s;
+        }
+        .menuimages1:hover{
+            transform:scale(1.2)
+        }
+        .menuimage2>img{
+            width:1500px;
+            margin-left:20px;
+            margin-top:10px;
+            height:auto;
+            padding-top:200px;
+        }
+        .menuimage3>img{
+            width:1500px;
+            margin-left:20px;
+            margin-top:10px;
+            height:auto;
+            padding-top:200px;
+        }
+        .menu1content{
+            background-color:black;
+            position:absolute;
+            top:40070px;
+            width:1500px;
+            height:200px;
+        }
+        .menu1content>h5{
+            color:white;
+            margin-left:120px;
+            font-size: 80px;; 
+        }
+        .menu1content>h3{
+            color:white;
+            padding-left:30px;
+            font-size: 50px;;  
+        }
+        .menu2content{
+             background-color:black;
+            position:absolute;
+            top:41570px;
+            width:1500px;
+            height:200px;
+        }
+        .menu2content>h5{
+            color:white;
+            margin-left:120px;
+            font-size: 80px;;
+        }
+        .menu2content>h3{
+          color:white;
+            padding-left:30px;
+            font-size: 50px;;
+        }
+        .menu3content{
+             background-color:black;
+            position:absolute;
+            top:42870px;
+            width:1500px;
+            height:200px;   
+        }
+        .menu3content>h5{
+            color:white;
+            margin-left:120px;
+            font-size: 80px;;
+        }
+        .menu3content>h3{
+          color:white;
+            padding-left:30px;
+            font-size: 50px;;
+        }
+        .tenthblock{
+            width:1400px;
+            height:6000px;
+            margin-top:2500px;
+            display: block;
+            margin-left:60px;
+            gap:0;
+        }
+        .tenthblock>img{
+            width:1500px;
+            height:auto;
+        }
+        .sub_tenthblock{
+            background-color:grey;
+            height:4000px;
+            margin-left:60px;
+            padding-top:1200px;
+            width:1500px;
+            display: block; 
+        }
+        .touch{
+            grid-column: 1/2;
+            color:white;
+            margin-left:40px;
+            font-size:100px;
+        }
+        .touch>h1{
+            margin-top:20px;
+            margin-left:10px;
+
+        }
+        .touch>h5{
+            margin-left:200px;
+            padding-top:20px;
+        }
+        .quicklinks{
+            color:white;
+            grid-column: 2/3;
+            font-size: 100px;
+            margin-left:40px;
+            padding-top:100px; 
+        }
+        .quicklinks>h5{
+            padding-left:20px;
+            padding-top:20px;
+            margin-left:200px;
+        }
+        .quicklinks>h1{
+            margin-top:20px;
+        }
+        .morelinks{
+            color:white;
+            grid-column: 3/4;
+            font-size: 100px;
+            margin-left:40px;
+        }
+        .morelinks>h1{
+            margin-top:20px;
+
+        }
+        .morelinks>h5{
+            padding-left:20px;
+            padding-top:20px;
+            margin-left:200px;
+        }
+        .form{
+            grid-column: 4/6;
+            background-color: black;
+            color:white;
+            width:1500px;;
+            height:1300px;
+            padding-left:70px;
+            font-size: 200px;
+        }
+        .form>h1{
+            margin-left:280px;
+            margin-top:100px;
+            font-size: 140px;
+            padding-top:200px;
+        }
+        .form>h5{
+            margin-left:140px;
+            font-size: 60px;
+            padding-top:15px;
+        }
+        .form>p{
+            font-size: 54px;
+            padding-top: 15px;
+        }
+        .form>input{
+            margin-left:260px;
+            margin-top:10px;
+            height:200px;
+            width:700px;
+            font-size:100px;
+        }
+        .form h2{
+            margin-left:130px;
+            height:320px;
+            width:400px;
+            display: none;
+        }
+        .elevenblock{
+            display: none;
+        }
        
+
        
     </style>
 </head>
 <body>
     <div class="firstblock">
+       
         <div class="parent">
             <div class="child1"><b>CHEFER</b></div>
             <div class="child2">
